@@ -8,13 +8,16 @@ import { Simplr, Adapter, AdapterForNgrxStore } from 'ngrx-store-simplr';
 
 import { AppComponent } from './app.component';
 import { CounterContainerComponent } from './containers/counter';
+import { CounterNgrxContainerComponent } from './containers/counter-ngrx';
 import { CounterService } from './services/counter';
+import { CounterNgrxService } from './services/counter-ngrx';
 import { reducer, initialState } from './store/reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterContainerComponent,
+    CounterNgrxContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { reducer, initialState } from './store/reducer';
     Simplr,
     { provide: Adapter, useClass: AdapterForNgrxStore },
     CounterService,
+    CounterNgrxService,
   ],
   bootstrap: [AppComponent]
 })

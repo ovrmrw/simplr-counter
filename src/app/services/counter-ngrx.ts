@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Dispatcher } from '@ngrx/store';
 
-import { AppState } from '../store/models';
 import * as counter from '../store/actions/counter-ngrx';
 
 

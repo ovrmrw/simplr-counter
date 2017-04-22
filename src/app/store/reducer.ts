@@ -10,7 +10,7 @@ const wrapper = new Wrapper<AppState>();
 
 const finalReducer = combineReducers({
   counter: wrapper.wrapReducerForSimplr('counter', counterReducer),
-  'counter-ngrx': wrapper.wrapReducerForSimplr('counter-ngrx', counterNgrxReducer),
+  'counter-ngrx': counterNgrxReducer,
 });
 
 export function reducer(state, action) {

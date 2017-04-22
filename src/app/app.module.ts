@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { Simplr, Adapter, AdapterForNgrxStore } from 'ngrx-store-simplr';
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { reducer, initialState } from './store/reducer';
     FormsModule,
     HttpModule,
     StoreModule.provideStore(reducer, initialState),
+    StoreDevtoolsModule.instrumentStore(),
   ],
   providers: [
     Simplr,

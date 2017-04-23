@@ -17,6 +17,6 @@ export class CounterService {
   }
 
   reset() {
-    this.simplr.dispatch('counter', () => ({ ...initialState.counter }));
+    this.simplr.dispatch('counter', ({ ...initialState.counter }));
   }
 }

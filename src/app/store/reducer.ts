@@ -2,14 +2,13 @@ import { combineReducers } from '@ngrx/store';
 import { Wrapper } from 'ngrx-store-simplr';
 
 import { AppState } from './models';
-import { counterReducer } from './reducers/counter';
 import { counterNgrxReducer } from './reducers/counter-ngrx';
 
 const wrapper = new Wrapper<AppState>();
 
 
 const finalReducer = combineReducers({
-  counter: wrapper.wrapReducerForSimplr('counter', counterReducer),
+  counter: wrapper.createWrappedReducer('counter'),
   'counter-ngrx': counterNgrxReducer,
 });
 

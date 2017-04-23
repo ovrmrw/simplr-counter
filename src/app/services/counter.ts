@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Simplr } from 'ngrx-store-simplr';
 
 import { AppState } from '../store/models';
-import * as counter from '../store/actions/counter';
 import { initialState } from '../store/reducer';
 
 

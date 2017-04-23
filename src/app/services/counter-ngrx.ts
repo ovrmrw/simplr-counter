@@ -10,8 +10,12 @@ export class CounterNgrxService {
     private dispatcher$: Dispatcher,
   ) { }
 
-  increment(num: number) {
-    this.dispatcher$.dispatch(new counter.ActionIncrement(num));
+  increment() {
+    this.dispatcher$.dispatch(new counter.ActionIncrement(1));
+  }
+
+  decrement() {
+    this.dispatcher$.dispatch(new counter.ActionIncrement(-1));
   }
 
   reset() {

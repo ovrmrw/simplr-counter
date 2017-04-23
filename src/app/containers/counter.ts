@@ -21,11 +21,11 @@ export class CounterContainerComponent {
   ) { }
 
   increment() {
-    this.service.increment(1);
+    this.service.increment();
   }
 
   decrement() {
-    this.service.increment(-1);
+    this.service.decrement();
   }
 
   reset() {

@@ -12,14 +12,14 @@ export class CounterService {
   ) { }
 
   increment() {
-    this.simplr.dispatch('counter', (state) => ({ value: state.value + 1 }));
+    this.simplr.dispatch('counter', (state) => state + 1);
   }
 
   decrement() {
-    this.simplr.dispatch('counter', (state) => ({ value: state.value - 1 }));
+    this.simplr.dispatch('counter', (state) => state - 1);
   }
 
   reset() {
-    this.simplr.dispatch('counter', ({ ...initialState.counter }));
+    this.simplr.dispatch('counter', initialState.counter);
   }
 }

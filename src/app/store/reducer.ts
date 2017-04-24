@@ -28,10 +28,6 @@ export function reducer(state, action) { // workaround for AoT build
 }
 
 export const initialState: AppState = {
-  counter: {
-    value: 0,
-  },
-  'counter-ngrx': {
-    value: 0,
-  },
+  counter: 0,
+  'counter-ngrx': 0,
 };

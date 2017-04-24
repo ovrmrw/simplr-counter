@@ -17,13 +17,13 @@ const wrapper = new Wrapper<AppState>();
 // }
 
 const wrappedReducers = wrapper.mergeReducersIntoWrappedReducers({
-  counter: null,
+  counter: null, // if you have the reducer for counter key, set here instead of null.
   'counter-ngrx': counterNgrxReducer,
 });
 
 const rootReducer = combineReducers(wrappedReducers);
 
-export function reducer(state, action) {
+export function reducer(state, action) { // workaround for AoT build
   return rootReducer(state, action);
 }
 

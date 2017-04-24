@@ -7,23 +7,14 @@ import { counterNgrxReducer } from './reducers/counter-ngrx';
 const wrapper = new Wrapper<AppState>();
 
 
-// const finalReducer = combineReducers({
-//   counter: wrapper.createWrappedReducer('counter'),
-//   'counter-ngrx': counterNgrxReducer,
-// });
-
-// export function reducer(state, action) {
-//   return finalReducer(state, action);
-// }
-
 const wrappedReducers = wrapper.mergeReducersIntoWrappedReducers({
-  counter: null, // if you have the reducer for counter key, set here instead of null.
+  counter: null, // if you have a reducer for this key, set it here instead of null.
   'counter-ngrx': counterNgrxReducer,
 });
 
 const rootReducer = combineReducers(wrappedReducers);
 
-export function reducer(state, action) { // workaround for AoT build
+export function reducer(state, action) { // workaround for AoT compile
   return rootReducer(state, action);
 }
 

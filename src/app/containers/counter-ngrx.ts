@@ -8,6 +8,7 @@ import { CounterNgrxService } from '../services/counter-ngrx';
 @Component({
   selector: 'app-counter-ngrx-container',
   template: `
+    <h2>@ngrx/store Style</h2>
     <button (click)="increment()">increment</button>
     <button (click)="decrement()">decrement</button>
     <button (click)="reset()">reset</button>

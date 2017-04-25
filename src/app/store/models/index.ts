@@ -1,4 +1,4 @@
 export interface AppState {
-  counter: number;
+  'counter': number;
   'counter-ngrx': number;
 }

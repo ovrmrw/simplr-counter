@@ -8,6 +8,7 @@ import { CounterService } from '../services/counter';
 @Component({
   selector: 'app-counter-container',
   template: `
+    <h2>Simplr Style</h2>
     <button (click)="increment()">increment</button>
     <button (click)="decrement()">decrement</button>
     <button (click)="reset()">reset</button>
